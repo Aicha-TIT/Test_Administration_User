@@ -1,0 +1,105 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+<!-- START BREADCRUMB -->
+ <ul class="breadcrumb">
+   <li>
+     <a href="#">Home</a>
+   </li>
+  
+ </ul>
+ <!-- END BREADCRUMB -->
+<div class="page-content-wrap">
+<div class="row">
+  <div class="col-md-12">
+
+
+  {{ form_start(form,{'attr': {'class' : 'form-horizontal' }}) }}
+  <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"><span class="fa fa-users"></span> Ajouter Utilisateur</h3>
+                                    <ul class="panel-controls">
+                                        <li><a href="{{ path('utilisateur_index') }}" ><span class="fa fa-reply"></span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="panel-body">
+                                    </div>
+
+
+    <div class="panel-body">
+
+        <div class="form-group">
+            <label class="col-md-3 col-xs-12 control-label"> Nom</label>
+            <div class="col-md-6 col-xs-12">
+              <div class="input-group">
+                  <span class="input-group-addon">
+                     <span class="fa fa-pencil"></span>
+                   </span>
+                 {{form_widget(form.nom, { 'attr': {'class': 'form-control'} })}}
+            </div>
+            <span class="help-block">{{form_errors(form.nom)}}</span>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-3 col-xs-12 control-label"> Prénom</label>
+            <div class="col-md-6 col-xs-12">
+                <div class="input-group">
+                <span class="input-group-addon">
+              <span class="fa fa-sort-desc"></span>
+            </span>
+                 {{form_widget(form.prenom, { 'attr': {'class': 'form-control'} })}}
+            </div>
+            <span class="help-block">{{form_errors(form.prenom)}}</span>
+          </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 col-xs-12 control-label"> Sexe</label>
+            <div class="col-md-6 col-xs-12">
+                <div class="input-group">
+                <span class="input-group-addon">
+              <span class="fa fa-sort-desc"></span>
+            </span>
+                 {{form_widget(form.sexe, { 'attr': {'class': 'form-control'} })}}
+            </div>
+            <span class="help-block">{{form_errors(form.sexe)}}</span>
+          </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 col-xs-12 control-label"> Age</label>
+            <div class="col-md-6 col-xs-12">
+                <div class="input-group">
+                <span class="input-group-addon">
+              <span class="fa fa-sort-desc"></span>
+            </span>
+                 {{form_widget(form.age, { 'attr': {'class': 'form-control'} })}}
+            </div>
+            <span class="help-block">{{form_errors(form.age)}}</span>
+          </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 col-xs-12 control-label">Email</label>
+            <div class="col-md-6 col-xs-12">
+                <div class="input-group">
+                <span class="input-group-addon">
+              <span class="fa fa-sort-desc"></span>
+            </span>
+                 {{form_widget(form.email, { 'attr': {'class': 'form-control'} })}}
+            </div>
+            <span class="help-block">{{form_errors(form.email)}}</span>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="panel-footer">
+        <input  type="reset" class="btn btn-default pull-right"  style="margin-right:20px"/>
+        <input type="submit" class="btn btn-succes pull-right"  style="margin-right:20px"/>
+      </div>
+    {{ form_end(form) }}
+
+
+</div>
+</div>
+</div>
+{% endblock %}
